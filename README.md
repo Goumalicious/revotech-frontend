@@ -8,7 +8,7 @@ Nodejs is required for this project.
 
 ## Installation 
 
-Run 'npm install' in order to install all the required node modules.
+Run `npm install` in order to install all the required node modules.
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 This is the frontend of the application. In order for the application to successfully run you also need to have the backend (https://github.com/Goumalicious/revotech-backend) installed and running.
