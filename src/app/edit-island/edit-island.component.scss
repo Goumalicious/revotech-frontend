@@ -1,0 +1,71 @@
+body{
+    background-color: #dee9ff;
+}
+
+.center-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.edit-form form{
+    background-color: #fff;
+    margin: auto;
+    padding: 50px 70px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.edit-form .form-icon{
+	text-align: center;
+    background-color: #5891ff;
+    border-radius: 50%;
+    font-size: 40px;
+    color: white;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 50px;
+    line-height: 83px;
+}
+
+.edit-form .item{
+	border-radius: 20px;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+}
+
+.edit-form .edit-info{
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 576px) {
+    .edit-form form{
+        padding: 50px 20px;
+    }
+
+    .edit-form .form-icon{
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        line-height: 70px;
+    }
+}
+
+.error-text {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.spinner-size {
+    width: 20px;
+    height: 20px;
+}

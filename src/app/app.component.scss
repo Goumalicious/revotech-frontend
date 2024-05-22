@@ -1,0 +1,44 @@
+.login-button {
+    width: 90px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.search-bar-container {
+    width: 20%;
+}
+
+.auth {
+    display: flex;
+    align-items: center;
+}
+.title-font {
+    font-family: "Zeyada", cursive;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 35px;
+    color: #616caf;
+}
+
+.login-font {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+}
+
+@media screen and (max-width: 576px) {
+    .login-button {
+        width: 50px;
+        font-size: 12px;
+        margin-right: 5px;
+    }
+
+    .search-bar-container {
+        width: 300px;
+    }
+
+    .login-font {
+        margin-left: 0.5rem;
+    }
+}

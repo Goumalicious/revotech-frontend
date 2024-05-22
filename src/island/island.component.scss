@@ -1,0 +1,112 @@
+.island-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.upper-part, .lower-part {
+  display: flex;
+  width: 100%;
+}
+
+.island-info, .island-photo, #map, .full-description {
+  box-sizing: border-box;
+  padding: 20px;
+  align-items: center;
+}
+
+.full-description {
+  width: 100% !important;
+  align-self: center;
+}
+
+.island-title{
+  font-family: "Abril Fatface", serif;
+  font-weight: 450;
+  font-style: normal;
+  font-size: 100px;
+}
+.island-info, .full-description {
+  width: 50%;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 350;
+  font-style: italic;
+
+}
+
+.island-photo {
+  width: 50%;
+  position: relative;
+}
+
+.island-photo::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.island-photo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
+}
+
+.globe {
+  margin-bottom: 5rem;
+  margin-top:5rem;
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  font-size: 35px;
+  color: #0d6efd;
+  justify-content: center;
+}
+
+.island-link {
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.short-description {
+  margin-top: 10px;
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 25px;
+  margin-top: 2rem;
+  
+}
+
+@media screen and (max-width: 768px) {
+  .upper-part, .lower-part {
+    flex-direction: column;
+  }
+
+  .island-info, .island-photo, #map, .full-description {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .island-title{
+    font-family: "Abril Fatface", serif;
+    font-weight: 450;
+    font-style: normal;
+    font-size: 80px;
+  }
+  #map {
+    margin-top: 1rem;
+    height: 100%;
+  }
+
+  .full-description {
+    margin-top: 1rem;
+  }
+}

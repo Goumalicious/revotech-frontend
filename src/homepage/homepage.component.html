@@ -1,0 +1,48 @@
+<!-- <div class="row row-gap-4 flex-wrap">
+    <div *ngFor="let island of dataService?.islandsArray | async" class="col-auto">
+        <div class="card profile-card-5" (click)="user ? editIslandData(island, modalContent) : false">
+            <div class="card-img-block">
+                <img class="card-img-top" src="{{island.photo_thumb}}" alt="Card image cap" (click)="!user ? openImage(island, modalContent) : false">
+            </div>
+            <div class="card-body pt-0">
+                <h5 class="card-title cursor-pointer" [routerLink]="'/island/' + island.order">{{island.title}}</h5>
+                <p class="card-text">{{island.short_info}}</p>
+                <svg *ngIf="user" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="#fff" class="bi bi-pencil-square edit-icon" viewBox="0 0 16 16">
+                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                </svg>
+            </div>
+        </div>
+      </div>
+</div> -->
+
+<section class="light main-grid p-3">
+	<div *ngFor="let island of dataService?.islandsArray | async" class="container py-2 island-card">
+		<article class="postcard light blue">
+			<div class="postcard__img_link">
+				<img class="postcard__img" src="{{island.photo_thumb}}" (click)="openImage(island, modalContent)"/>
+			</div>
+			<div class="postcard__text t-dark">
+				<div class="d-flex">
+					<h1 class="postcard__title blue"><a [routerLink]="'/island/' + island.order">{{island.title}}</a></h1>
+					<svg id="edit-icon" *ngIf="user" xmlns="http://www.w3.org/2000/svg" width="31" height="31" fill="#fff" class="bi bi-pencil-square card-action align-self-center" viewBox="0 0 16 16" (click)="user ? editIslandData(island, modalContent) : false">
+						<path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+					</svg>
+				</div>
+
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">{{island.short_info}}</div>
+			</div>
+		</article>
+	</div>
+</section>
+
+
+<ng-template #modalContent let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">{{ magnifiedIsland.title }}</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<img class="col-12" src="{{magnifiedIsland.photo}}" alt="Image">
+	</div>
+</ng-template>
