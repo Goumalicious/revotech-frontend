@@ -11,7 +11,7 @@ export class DataService {
   user: BehaviorSubject<Parse.User> = new BehaviorSubject<Parse.User>(null);
   constructor() {
     Parse.initialize('P0c6Z9PqNdOXdtd6zXk7sMqbKPNdzMQi9E');
-    Parse.serverURL = 'http://localhost:5000/parse';
+    Parse.serverURL = 'http://localhost:5001/parse';
     Parse.masterKey = 'qAFJd3dIYVkWEg4oNpVg5NtDfmciEWJWUb8';
 
     this.getAllIslands();
